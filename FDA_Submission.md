@@ -50,6 +50,8 @@
 
 **Description of Validation Dataset:** 
 
+In the ChestX-ray14 dataset, there are 1431 images labeled with Pneumonia. However, in the sample, there are only 66 images. I used all of 1431 images for training model 6. Therefore, I used other datasets to validate my device.
+
 In order to validate my device, I used two datasets from Kaggle. 
 
 > Dataset is organized into 3 folders(train, test, val) and contains subfolders for each image category (Pneumonia/Normal). There are 5,863 X-Ray images (JPEG) and 2 categories (Pneumonia/Normal).

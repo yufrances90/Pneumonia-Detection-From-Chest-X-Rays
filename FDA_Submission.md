@@ -1,20 +1,23 @@
 # FDA  Submission
 
-**Your Name:**
+**Your Name:** Beijia(Frances Yu)
 
-**Name of your Device:**
+**Name of your Device:** Pneumonia Detection System
 
 ## Algorithm Description 
 
 ### 1. General Information
 
-**Intended Use Statement:** 
+**Intended Use Statement:** For assisting the radiologists in the detection of pneumonia in chest radiography
 
-**Indications for Use:**
+**Indications for Use:** Screening chest radiography for people aging from 5-65 years old
 
 **Device Limitations:**
+* Results from the device does not take into account patients' medical history
+* It is not for patients over 90 years old
 
 **Clinical Impact of Performance:**
+* It does not achieve fast performace in the absence of GPU
 
 ### 2. Algorithm Design and Function
 
@@ -26,43 +29,20 @@
 
 **CNN Architecture:**
 
----
-![alt text][cnn_model]
-
-ResNet architecture with weights trained is used. All layers from ResNet model are frozen during training. 
 
 ### 3. Algorithm Training
 
 **Parameters:**
-* Types of augmentation used during training 
-  * Rotation
-  * Horizontal shift
-  * Vertical shift
-  * Shearing
-  * Zoom
-  * Horizontal flip
-  * Normalization
-  * Resize the images to 224 * 224
+* Types of augmentation used during training
+* Batch size
+* Optimizer learning rate
+* Layers of pre-existing architecture that were frozen
+* Layers of pre-existing architecture that were fine-tuned
+* Layers added to pre-existing architecture
 
-* Batch size: 64
-* Optimizer learning rate: 0.001
-* Layers of pre-existing architecture that were frozen: All layers of ResNet
-* Layers of pre-existing architecture that were fine-tuned: None
-* Layers added to pre-existing architecture: 4 Dense layers + 4 Dropout layers
+<< Insert algorithm training performance visualization >> 
 
-> Model 6 Training Performance
-> ![alt text][model_6_training]
-
-> Model 7 Training Performance
-> ![alt text][model_7_training]
-
-(Only selected P-R curves are shown. More on evaluation reports for both models)
-
-> Model 6 P-R curve for [Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)
-> ![alt text][model_6_pr]
-
-> Model 7 P-R curve for [Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)
-> ![alt text][model_7_pr]
+<< Insert P-R curve >>
 
 **Final Threshold and Explanation:**
 
@@ -71,22 +51,9 @@ ResNet architecture with weights trained is used. All layers from ResNet model a
 
 **Description of Training Dataset:** 
 
+
 **Description of Validation Dataset:** 
 
-In the ChestX-ray14 dataset, there are 1431 images labeled with Pneumonia. However, in the sample, there are only 66 images. I used all of 1431 images for training model 6. Therefore, I used other datasets to validate my device.
-
-In order to validate my device, I used two datasets from Kaggle. 
-
-> Dataset is organized into 3 folders(train, test, val) and contains subfolders for each image category (Pneumonia/Normal). There are 5,863 X-Ray images (JPEG) and 2 categories (Pneumonia/Normal).
-> Chest X-ray images (anterior-posterior) were selected from retrospective cohorts of pediatric patients of one to five years old from Guangzhou Women and Children’s Medical Center, Guangzhou. All chest X-ray imaging was performed as part of patients’ routine clinical care.
-> For the analysis of chest x-ray images, all chest radiographs were initially screened for quality control by removing all low quality or unreadable scans. The diagnoses for the images were then graded by two expert physicians before being cleared for training the AI system. In order to account for any grading errors, the evaluation set was also checked by a third expert.
-> Link: [https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)
-
----
----
-
-> Dataset is organized into 2 folders (train, test) and both train and test contain 3 subfolders (COVID19, PNEUMONIA, NORMAL). DataSet contains total 6432 x-ray images and test data have 20% of total images.
-> Link: [https://www.kaggle.com/prashant268/chest-xray-covid19-pneumonia](https://www.kaggle.com/prashant268/chest-xray-covid19-pneumonia)
 
 ### 5. Ground Truth
 
@@ -97,11 +64,3 @@ In order to validate my device, I used two datasets from Kaggle.
 **Ground Truth Acquisition Methodology:**
 
 **Algorithm Performance Standard:**
-
-
-
-[model_6_training]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/model_6_training.png?raw=true "Model 6 Training Performance"
-[model_7_training]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/model_7_training.png?raw=true "Model 6 Training Performance"
-[cnn_model]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/cnn.png?raw=true "CNN Model"
-[model_6_pr]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/model_6_pr.png?raw=true "Model 6 Training Performance"
-[model_7_pr]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/model_7_pr.png?raw=true "Model 6 Training Performance"

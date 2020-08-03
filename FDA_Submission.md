@@ -65,6 +65,9 @@
 
 **Final Threshold and Explanation:**
 
+* Does not adjust threshold because resampling is done instead.
+* From the evaluation report for model 2, precision reaches 82% and recall reaches 89% for both datasets for validation. It means the device can detect 89% of real pneumonia cases, and about 82% of the positive prediction by the model is correct
+
 ### 4. Databases
 
 

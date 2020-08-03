@@ -58,7 +58,7 @@ ResNet architecture with weights trained is used. All layers from ResNet model a
 
 (Only selected P-R curves are shown. More on evaluation reports for both models)
 
-> Model 7 P-R curve for [Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)
+> Model 6 P-R curve for [Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)
 > ![alt text][model_6_pr]
 
 > Model 7 P-R curve for [Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)

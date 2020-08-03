@@ -56,7 +56,13 @@ ResNet architecture with weights trained is used. All layers from ResNet model a
 > Model 7 Training Performance
 > ![alt text][model_7_training]
 
-<< Insert P-R curve >>
+(Only selected P-R curves are shown. More on evaluation reports for both models)
+
+> Model 7 P-R curve for [Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)
+> ![alt text][model_6_pr]
+
+> Model 7 P-R curve for [Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)
+> ![alt text][model_7_pr]
 
 **Final Threshold and Explanation:**
 
@@ -97,3 +103,5 @@ In order to validate my device, I used two datasets from Kaggle.
 [model_6_training]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/model_6_training.png?raw=true "Model 6 Training Performance"
 [model_7_training]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/model_7_training.png?raw=true "Model 6 Training Performance"
 [cnn_model]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/cnn.png?raw=true "CNN Model"
+[model_6_pr]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/model_6_pr.png?raw=true "Model 6 Training Performance"
+[model_7_pr]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/model_7_pr.png?raw=true "Model 6 Training Performance"

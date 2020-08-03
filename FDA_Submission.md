@@ -25,18 +25,28 @@
 **Preprocessing Steps:**
 
 **CNN Architecture:**
+![alt text][cnn_model]
 
+ResNet architecture with weights trained is used. All layers from ResNet model are frozen during training. 
 
 ### 3. Algorithm Training
 
 **Parameters:**
-* Types of augmentation used during training
-* Batch size
-* Optimizer learning rate
-* Layers of pre-existing architecture that were frozen
-* Layers of pre-existing architecture that were fine-tuned
-* Layers added to pre-existing architecture
+* Types of augmentation used during training 
+  * Rotation
+  * Horizontal shift
+  * Vertical shift
+  * Shearing
+  * Zoom
+  * Horizontal flip
+  * Normalization
+  * Resize the images to 224 * 224
 
+* Batch size: 64
+* Optimizer learning rate: 0.001
+* Layers of pre-existing architecture that were frozen: All layers of ResNet
+* Layers of pre-existing architecture that were fine-tuned: None
+* Layers added to pre-existing architecture: 4 Dense layers + 4 Dropout layers
 
 > Model 6 Training Performance
 > ![alt text][model_6_training]
@@ -84,3 +94,4 @@ In order to validate my device, I used two datasets from Kaggle.
 
 [model_6_training]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/model_6_training.png?raw=true "Model 6 Training Performance"
 [model_7_training]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/model_7_training.png?raw=true "Model 6 Training Performance"
+[cnn_model]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/cnn.png?raw=true "CNN Model"

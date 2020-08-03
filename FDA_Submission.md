@@ -37,7 +37,12 @@
 * Layers of pre-existing architecture that were fine-tuned
 * Layers added to pre-existing architecture
 
-<< Insert algorithm training performance visualization >> 
+
+> Model 6 Training Performance
+> ![alt text][model_6_training]
+
+> Model 7 Training Performance
+> ![alt text][model_7_training]
 
 << Insert P-R curve >>
 
@@ -74,3 +79,8 @@ In order to validate my device, I used two datasets from Kaggle.
 **Ground Truth Acquisition Methodology:**
 
 **Algorithm Performance Standard:**
+
+
+
+[model_6_training]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/model_6_training.png?raw=true "Model 6 Training Performance"
+[model_7_training]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/model_7_training.png?raw=true "Model 6 Training Performance"

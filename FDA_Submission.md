@@ -25,6 +25,8 @@
 **Preprocessing Steps:**
 
 **CNN Architecture:**
+
+---
 ![alt text][cnn_model]
 
 ResNet architecture with weights trained is used. All layers from ResNet model are frozen during training. 

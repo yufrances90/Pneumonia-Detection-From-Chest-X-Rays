@@ -21,11 +21,19 @@
 
 ### 2. Algorithm Design and Function
 
-<< Insert Algorithm Flowchart >>
+![alt text][algorithm_flowchart]
 
 **DICOM Checking Steps:**
+1. Checks if it is a .dcm file
+2. Checks if all required fields are included in the header
+3. Checks if the image type is DX
+4. Checks if the image position is either AP or PA
+5. Checks if body part examined is CHEST
 
 **Preprocessing Steps:**
+1. Converts color space from BGR to RGB
+2. Converts to tensor from numpy array with normalization
+3. Change the size of the image to 224 * 224
 
 **CNN Architecture:**
 
@@ -132,3 +140,5 @@ The diagnoses for the images should be graded by two expert physicians. In order
 [model_2_pr]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/model_2_pr.png?raw=true "Model 6 Training Performance"
 [model_1_distribution]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/model_1_distribution.png?raw=true "Model 1 Pneumonia Distribution"
 [model_2_distribution]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/model_2_distribution.png?raw=true "Model 2 Pneumonia Distribution"
+
+[algorithm_flowchart]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/algorithm_flowchart.png?raw=true  "Algorithm Flowchart"

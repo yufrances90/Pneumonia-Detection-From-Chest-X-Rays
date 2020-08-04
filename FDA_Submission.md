@@ -66,7 +66,7 @@
 **Final Threshold and Explanation:**
 
 * Does not adjust threshold because resampling is done instead.
-* From the evaluation report for model 2, precision reaches 82% and recall reaches 89% for both datasets for validation. It means the device can detect 89% of real pneumonia cases, and about 82% of the positive prediction by the model is correct
+* From the evaluation report for model 2, precision achieves 82% and recall achieves 89% for both datasets for validation. It means the device can detect 89% of real pneumonia cases, and about 82% of the positive predictions by the model is correct
 
 ### 4. Databases
 
@@ -81,7 +81,7 @@ At the beginning, the device is trained using random sample (5%, 5606 images) of
 
 ![alt text][model_2_distribution]
 
-The predictions made by model 1 does not seem that bad, but the training set contains too many duplications of the pneumonia-positive images as a result of resampling. Due to the concern of too many duplications, I am thinking about constructing a new dataset to feed into the same network. All pneumonia-positive images (1431 images) from the full NIH Chest X-ray are used. For Normal class, all images (1431 images) are randomly selected from the sample NIH dataset. The resulting dataset is used to train model 2.
+The predictions made by model 1 does not seem that bad, but the training set contains too many duplications of the pneumonia-positive images as a result of resampling. Due to the concern of too many duplications, I am thinking about constructing a new dataset to feed into the same network. All pneumonia-positive images (1431 images) from the full NIH Chest X-ray are used. For Normal class, all images (1431 images) are randomly selected from the sample NIH dataset - no duplicated images is used to train model 2.
 
 
 **Description of Validation Dataset:** 
@@ -105,9 +105,23 @@ Three datasets are used to validate model 1, and among the datasets for validati
 
 **Patient Population Description for FDA Validation Dataset:**
 
+* Age ranges: 5 - 65
+* Sex: 40% of Female & 60% of Male
+* Type of imaging modality: Frontal radiographs
+* Body part imaged: Chest
+* Prevalence of disease of interest: 50%
+* Any other diseases that should be included or excluded as comorbidities in the population: Pneumonia without any comorbidities
+
 **Ground Truth Acquisition Methodology:**
+The diagnoses for the images should be graded by two expert physicians. In order to account for any grading errors, the dataset should be checked by a third expert who has more years of experience
 
 **Algorithm Performance Standard:**
+* F1 Score: 43.5% (95% CI 0.387, 0.481)
+* AUROC: 0.7680
+
+### References:
+* [CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning](https://arxiv.org/pdf/1711.05225.pdf)
+
 
 [cnn_model]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/cnn1.png?raw=true "CNN Model"
 

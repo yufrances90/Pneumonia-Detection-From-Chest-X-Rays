@@ -65,6 +65,7 @@
 
 **Final Threshold and Explanation:**
 
+* For the first 6 epoches, validation losses are lower than training loss. Starting from the seven epoch, validation loss starts to get higher than training loss
 * Does not adjust threshold because resampling is done instead.
 * From the evaluation report for model 2, precision achieves 82% and recall achieves 89% for both datasets for validation. It means the device can detect 89% of real pneumonia cases, and about 82% of the positive predictions by the model is correct
 

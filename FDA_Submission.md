@@ -101,6 +101,8 @@ Three datasets are used to validate model 1, and among the datasets for validati
 
 ### 5. Ground Truth
 
+Natural Language Processing is used to extract disease labels from the associated radiological reports. Because the number of these reports is huge, it is faster and less expensive using NLP. However, some disease labels may not be extracted correctly since the accuracy of using NLP labelling is estimated to be over 90%. 
+
 ### 6. FDA Validation Plan
 
 **Patient Population Description for FDA Validation Dataset:**

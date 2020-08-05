@@ -18,7 +18,9 @@
 * It is not intented for patients with Atelectasis or Infiltration
 
 **Clinical Impact of Performance:**
+![alt text][cx_testing] 
 * It does not achieve fast performace in the absence of GPU
+* Most of the time, the device can detect if a patient has Pneumonia. However, it can classify healthy people as patients with Pneumonia
 
 ### 2. Algorithm Design and Function
 
@@ -67,16 +69,18 @@
 * Layers of pre-existing architecture that were fine-tuned: None
 * Layers added to pre-existing architecture: 4 dense layers + 4 dropout
 
-
 > Training Performance
 > ![alt text][model_training]
 
-<< Insert P-R curve >>
+> Classification Report for Testing Dataset
+> ![alt text][classification_report_testing]
 
 **Final Threshold and Explanation:**
 
 ### 4. Databases
- (For the below, include visualizations as they are useful and relevant)
+ ![alt text][pneumonia_distribution]
+ ![alt text][age_distribution]
+ ![alt text][gender_distribution]
 
 **Description of Training Dataset:** 
 
@@ -86,6 +90,7 @@
 
 ### 5. Ground Truth
 
+Natural Language Processing is used to extract disease labels from the associated radiological reports. Because the number of these reports is huge, it is faster and less expensive using NLP. However, some disease labels may not be extracted correctly since the accuracy of using NLP labelling is estimated to be over 90%. Due to potential risks of wrong labelling, and as the device depends on these disease labels, the predictions made by the device may not be correct.
 
 
 ### 6. FDA Validation Plan
@@ -117,3 +122,11 @@ The diagnoses for the images should be graded by two expert physicians. In order
 [model_training]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/__results___8_0.png?raw=true "Model Training Performance"
 
 [thresh_vs_f1_score]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/thresh_vs_f1score.png?raw=true "Threshold Vs. F1-score"
+
+[cx_testing]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/confusion_matrix_testing.png?raw=true "Confusion Matrix for Testing Dataset"
+
+[classification_report_testing]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/classification_report_testing.png?raw=true "Classification Report for Testing Dataset"
+
+[pneumonia_distribution]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/pneumonia_distribution.png?raw=true "Distribution of Pneumonia-positive and Pneumonia-negative"
+[age_distribution]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/age_distribution.png?raw=true "Distribution of Patient Age"
+[gender_distribution]: https://github.com/yufrances90/Pneumonia-Detection-From-Chest-X-Rays/blob/master/assets/gender_distribution.png?raw=true "Distribution of Patient Gender"

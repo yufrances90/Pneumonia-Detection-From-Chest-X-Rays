@@ -77,16 +77,18 @@
 
 **Final Threshold and Explanation:**
 
+When the threshold equals 0.2, recall gets over 80%, but F1-score reaches its highest when threshold equals 0.5.
+The device can detect pneumonia most of the time, but it is less certain in confirming if a suspicious patient truly gets pneumonia.
+
 ### 4. Databases
  ![alt text][pneumonia_distribution]
  ![alt text][age_distribution]
  ![alt text][gender_distribution]
 
 **Description of Training Dataset:** 
-
-
+The entire training dataset is selected from random sample (5606 images) of NIH dataset. There are only 66 pneumonia-positive images, and the rest of the data is pneumonia-negative. To balance the dataset, the number of pneumonia-positive images must be the same as the pneumonia-negative ones. Up-sampling was done for the PNEUMONIA class by sampling with replacement. At the mean time, down-sampling was done for the NON PNEUMONIA class by sampling without replacement. The number of male patients is greater than the number of female patients. Patient ages forms a bell curve distribution. 
 **Description of Validation Dataset:** 
-
+The entire testing dataset is selected from all images that are not in the sample NIH dataset. The ratio between pneumonia-positive cases and pneumonia-negative cases is 1:4. Patient ages forms a bell curve distribution, and the number of male patients is greater than the number of female patients.
 
 ### 5. Ground Truth
 
